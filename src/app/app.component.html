@@ -3,14 +3,19 @@
     <div class="box column is-one-third">
 
       <h1 class="title has-text-centered">Typing Challenge</h1>
-      <p class="has-text-centered">Lorem Ipsum</p>
+      <p class="has-text-centered">{{ randomSentence }}</p>
 
       <div class="field">
-        <input class="input" value="placeholder text" type="text">
+        <input 
+          class="input" 
+          #inputEl 
+          (input)="onInput(inputEl.value)" 
+          type="text"
+        >
       </div>
 
       <div class="box has-text-centered">
-       <h1>You Win!</h1> 
+       <h1 [hidden]="!win" >You Win!</h1> 
       </div>
       
     </div>
