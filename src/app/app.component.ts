@@ -13,11 +13,18 @@ export class AppComponent {
 
   onInput(value: string): void {
     this.input = value;
-
+    
     if(this.input === this.randomSentence) {
       this.win = true;
     }
-    
+
   }
 
+  compareChar(randomChar: string, inputChar: string) {
+    if(!inputChar){
+      return 'pending';
+    }
+    
+    return randomChar === inputChar ? 'correct' : 'incorrect';  
+  }
 }
