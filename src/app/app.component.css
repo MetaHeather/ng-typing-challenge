@@ -9,5 +9,11 @@
 .incorrect {
     color: red;
     font-weight: bold;
+    border-bottom: 2px solid red;
 }
+
+.field {
+    padding-top: 10px;
+}
+
 
